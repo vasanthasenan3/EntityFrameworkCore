@@ -1,0 +1,11 @@
+﻿@using Asp.netpractice.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Asp.netpractice.Models.Students;
+<form method="post">
+    @Html.EditorForModel()
+    @Html.HiddenFor(x=>x.Id)
+    <input type="submit" asp-action="SaveData" asp-controller="Home" name="Savedata" value="SaveData" />
+    <input type="submit" asp-action="UpdateData" asp-controller="Home" name="Updatedata" value="UpdateData" />
+    <input type="submit" asp-action="DeleteData" asp-controller="Home" name="DeleteData" value="DeleteData" />
+</form>
+<hr/>
